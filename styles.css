@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: url('https://i.pinimg.com/originals/a2/5e/88/a25e882caa4b96bc62d71a22ee7cb9e1.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Game container */
+.game-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Menu styling */
+.menu {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Button styling */
+button {
+    background-color: cadetblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: floralwhite;
+    color: rebeccapurple;
+}
+
+/* Character selection dropdown */
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+    z-index: 10;
+    position: relative;
+}
+
+/* Canvas styling */
+canvas {
+    display: block;
+    border: 3px solid rebeccapurple;
+    margin-top: 20px;
+}
+
+/* Center Start Button in the middle */
+#startButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: rebeccapurple;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    display: none;
+    border-radius: 5px;
+}
+
+/* Restart Button Styling */
+#restartButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    background-color: rebeccapurple;
+    color: azure;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#restartButton:hover {
+    background-color: rebeccapurple;
+    color: azure;
+}
+
+/* Custom Game Over Alert */
+#gameOverAlert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rebeccapurple;
+    color: floralwhite;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 24px;
+    text-align: center;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+
+/* Character preview container */
+#character-preview {
+    margin-top: 20px;
+}
+
+/* Resize character preview image */
+#character-preview img {
+    width: 150px;
+    height: 150px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .menu {
+        top: 5%;
+        width: 90%;
+    }
+    
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+        max-width: 180px;
+    }
+
+    select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #character-preview img {
+        width: 120px;
+        height: 120px;
+    }
+}
